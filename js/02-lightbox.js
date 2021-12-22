@@ -6,10 +6,10 @@ console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
 
-const itemMurkup = galleryItems.map(galleryItems => {
+const itemMurkup = galleryItems.map(({original, preview, description}) => {
     return `<li>
-    <a class="gallery__item" href="${galleryItems.original}">
-        <img class="gallery__image" src="${galleryItems.preview}" data-source="${galleryItems.original}" alt="${galleryItems.description}" />
+    <a class="gallery__item" href="${original}">
+        <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}" />
         </a>
         </li>`
 }).join('')

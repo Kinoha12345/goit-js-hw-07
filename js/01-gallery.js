@@ -4,9 +4,9 @@ import { galleryItems } from './gallery-items.js';
 
 const gallery = document.querySelector('.gallery');
 
-const itemMurkup = galleryItems.map(galleryItems => {
-    return `<a class="gallery__item" href="${galleryItems.original}">
-        <img class="gallery__image" src="${galleryItems.preview}" data-source="${galleryItems.original}" alt="${galleryItems.description}" />
+const itemMurkup = galleryItems.map(({original, preview, description} )=> {
+    return `<a class="gallery__item" href="${original}">
+        <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}" />
         </a>`
 }).join('')
 
